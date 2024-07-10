@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+{% block content %}
+  <!-- <h1> Flask Blog</h1> -->
+  <!-- start for -->
+  {% for post in posts %}
+    <!-- Article content started -->
+    <article class="media content-section">
+      <div class="media-body">
+        <div class="article-metadata">
+          <a class="mr-2" href="#">{{ post.author }}</a>
+          <small class="text-muted">{{ post.date_posted }}</small>
+        </div>
+        <h2><a class="article-title" href="#">{{ post.title }}</a></h2>
+        <p class="article-content">{{ post.content }}</p>
+      </div>
+    </article>
+    <!-- Article content end -->
+  {% endfor %}
+  <!-- End of start for -->
+
+{% endblock content %}
